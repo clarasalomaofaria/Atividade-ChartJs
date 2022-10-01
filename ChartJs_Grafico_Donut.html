@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico Donut</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="display: flex; justify-content: center; margin-top: 20vh;">
+    
+    <div>
+        <canvas id="Donut_Chart" style="position: relative; height:30vh; width:30vw"></canvas>
+    </div>
+
+</body>
+
+<script>
+      const data = {
+  labels: [
+        'Temperatura em Janeiro',
+        'Temperatura em Fevereiro',
+        'Temperatura em Março',
+    ],
+  datasets: [{
+    label: 'Umidade dos meses',
+    data: [88, 68, 98],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
+    ],
+    hoverOffset: 4
+  }]
+};
+
+const config = {
+  type: 'doughnut',
+  data: data,
+};
+
+const myChart3 = new Chart(
+        document.getElementById('Donut_Chart'),
+        config
+    );
+</script>
+
+</html>
